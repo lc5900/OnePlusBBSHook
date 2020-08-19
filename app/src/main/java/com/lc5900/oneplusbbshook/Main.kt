@@ -6,6 +6,7 @@ import com.lc5900.oneplusbbshook.module.PhoneNameModule
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam
 
+
 class Main : IXposedHookLoadPackage {
     override fun handleLoadPackage(lpparam: LoadPackageParam) {
         if ("com.oneplus.bbs" != lpparam.packageName) {

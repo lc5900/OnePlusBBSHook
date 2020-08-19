@@ -13,6 +13,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.App">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
         <!-- 表明这是一个xposed插件 -->
         <meta-data
             android:name="xposedmodule"
@@ -23,6 +34,11 @@
         <meta-data
             android:name="xposeddescription"
             android:value="一加社区更改小尾巴" />
+
+        <provider
+            android:name="com.android.zgj.utils.MultiprocessSharedPreferences"
+            android:authorities="com.lc5900.oneplusbbshook.provider"
+            android:exported="true" />
     </application>
 
 </manifest>
